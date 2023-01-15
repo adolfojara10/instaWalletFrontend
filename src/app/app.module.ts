@@ -11,6 +11,7 @@ import { AdministracionDeudasComponent } from './pages/administracion-deudas/adm
 import { AprovacionPrestamoComponent } from './pages/aprovacion-prestamo/aprovacion-prestamo.component';
 import { ConversionMonedaComponent } from './pages/conversion-moneda/conversion-moneda.component';
 import { HttpClientModule } from '@angular/common/http';
+import { TablaAmortizacionComponent } from './pages/tabla-amortizacion/tabla-amortizacion.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { HttpClientModule } from '@angular/common/http';
     EstadoCuentaComponent,
     AdministracionDeudasComponent,
     AprovacionPrestamoComponent,
-    ConversionMonedaComponent
+    ConversionMonedaComponent,
+    TablaAmortizacionComponent
 
   ],
   imports: [
