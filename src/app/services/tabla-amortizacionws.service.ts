@@ -11,7 +11,7 @@ export class TablaAmortizacionwsService {
   constructor(private http: HttpClient) { }
 
   simular(simulador: simuladorAhorro){
-    let url = environment.WS_PATH + '/cuenta/rendimientoCuenta?monto='+simulador.monto+'&tiempo='+simulador.tiempo;
+    let url = environment.WS_PATH + '/credito/tabla-amortizacion?numeroDeCuotas='+simulador.tiempo+'&valorCredito='+simulador.monto;
     return this.http.post<any>(url, simulador);
   }
 }

@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  WS_PATH: "http://localhost:8080/ProyectoFinalBanco/webProy"
+  WS_PATH: "http://localhost:8080/instawallet"
 };
 
 /*

@@ -31026,35 +31026,21 @@
                                                                 <th>
                                                                     Valor a pagar
                                                                 </th>
-                                                                <th>
-                                                                    Intereses a pagar
-                                                                </th>
-                                                                <th>
-                                                                    Valor total
-                                                                </th>
+                                                                
                                                             </thead>
                                                             <tbody>
 
                                                                 <th>
-                                                                    <li *ngFor="let deuda of deudas | async">
-                                                                        {{deuda.id}}
+                                                                    <li *ngFor="let cuotaCredito of deudas | async">
+                                                                        {{cuotaCredito.fechaPago}}
                                                                     </li>
                                                                 </th>
                                                                 <th>
-                                                                    <li *ngFor="let deuda of deudas | async">
-                                                                        {{deuda.tipo}}
+                                                                    <li *ngFor="let cuotaCredito of deudas | async">
+                                                                        {{cuotaCredito.pago}}
                                                                     </li>
                                                                 </th>
-                                                                <th>
-                                                                    <li *ngFor="let deuda of deudas | async">
-                                                                        {{deuda.deuda}}
-                                                                    </li>
-                                                                </th>
-                                                                <th>
-                                                                    <li *ngFor="let deuda of deudas | async">
-                                                                        {{deuda.estado}}
-                                                                    </li>
-                                                                </th>
+                                                             
                                                             </tbody>
                                                         </table>
                                                     </ul>

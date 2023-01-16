@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { deudasWs } from 'src/app/domain/deudas';
+import { CuotaCreditoWS } from 'src/app/domain/cuotaCredito';
 import { simuladorAhorro } from 'src/app/domain/simulador';
 import { TablaAmortizacionwsService } from 'src/app/services/tabla-amortizacionws.service';
 
@@ -10,15 +10,17 @@ import { TablaAmortizacionwsService } from 'src/app/services/tabla-amortizacionw
 })
 export class TablaAmortizacionComponent implements OnInit {
 
-  deuda: deudasWs = new deudasWs();
-  deudaPrestamo: deudasWs = new deudasWs();
+  //deuda: deudasWs = new deudasWs();
+  //deudaPrestamo: deudasWs = new deudasWs();
   deudas:any;
-  deudasPrestamo:any;
+  //deudasPrestamo:any;
+
+  cuotaCredito : CuotaCreditoWS = new CuotaCreditoWS();
 
 
   simuladorAhorro: simuladorAhorro = new simuladorAhorro();
 
-  rendimiento : number = 0;
+  //rendimiento : number = 0;
 
   constructor(private simuladorTabla: TablaAmortizacionwsService) { }
 
