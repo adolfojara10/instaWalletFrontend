@@ -12,7 +12,7 @@ export class TablaAmortizacionComponent implements OnInit {
 
   //deuda: deudasWs = new deudasWs();
   //deudaPrestamo: deudasWs = new deudasWs();
-  deudas:any;
+  deudas: CuotaCreditoWS[] = [];
   //deudasPrestamo:any;
 
   cuotaCredito : CuotaCreditoWS = new CuotaCreditoWS();
@@ -28,9 +28,16 @@ export class TablaAmortizacionComponent implements OnInit {
   }
 
   simular(){
-    this.simuladorTabla.simular(this.simuladorAhorro).subscribe((date: any) => {
-      console.log(date);
-      this.deudas = date;
+    console.log("Simulaaaaaaaaaaaaaaaar")
+    this.simuladorTabla.simular(this.simuladorAhorro).subscribe((data) => {
+      console.log(data);
+      this.deudas = data;
+      for (let i = 0; i < this.deudas.length; i++) {
+        const element = this.deudas[i];
+        console.log(element.fechaPago);
+        
+        
+      }
     })
   }
 

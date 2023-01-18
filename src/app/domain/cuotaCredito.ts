@@ -2,6 +2,7 @@ export class CuotaCreditoWS{
 
     id : number =0;
     fechaPago: Date = new Date();
-    //fecha: Date = new Date();
-    pago: number = 0;
+    valorPago: number = 0;
+    estado: String = "";
+    creditoId: number = 0;
 }

@@ -31028,16 +31028,16 @@
                                                                 </th>
                                                                 
                                                             </thead>
-                                                            <tbody>
+                                                            <tbody *ngFor="let cuotaCredito of deudas">
 
                                                                 <th>
-                                                                    <li *ngFor="let cuotaCredito of deudas | async">
-                                                                        {{cuotaCredito.fechaPago}}
+                                                                    <li >
+                                                                        {{cuotaCredito.fechaPago | date:'yyyy-MM-dd'}}
                                                                     </li>
                                                                 </th>
                                                                 <th>
-                                                                    <li *ngFor="let cuotaCredito of deudas | async">
-                                                                        {{cuotaCredito.pago}}
+                                                                    <li>
+                                                                        {{cuotaCredito.valorPago}}
                                                                     </li>
                                                                 </th>
                                                              
