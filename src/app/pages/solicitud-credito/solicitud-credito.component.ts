@@ -19,7 +19,11 @@ export class SolicitudCreditoComponent implements OnInit {
   }
 
   solicitar(){
-    
+    console.log("Simulaaaaaaaaaaaaaaaar")
+    this.creditows.solicitar(this.credito).subscribe((data) => {
+      console.log(data);
+      
+    })
   }
 
 }

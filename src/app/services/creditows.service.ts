@@ -11,7 +11,7 @@ export class CreditowsService {
   constructor(private http: HttpClient) { }
 
   solicitar(credito: Credito){
-    let url = environment.WS_PATH + '/credito/?credito='+credito;
+    let url = environment.WS_PATH + '/credito/';
     return this.http.post<any>(url, credito);
   }
 }
