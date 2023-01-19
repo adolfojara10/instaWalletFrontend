@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Credito } from 'src/app/domain/creditows';
 import { CreditowsService } from 'src/app/services/creditows.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-solicitud-credito',
@@ -13,7 +14,7 @@ export class SolicitudCreditoComponent implements OnInit {
 
   //creditows : CreditowsService = new CreditowsService();
 
-  constructor(private creditows: CreditowsService) { }
+  constructor(private creditows: CreditowsService, private router: Router) { }
 
   ngOnInit(): void {
   }
@@ -24,6 +25,10 @@ export class SolicitudCreditoComponent implements OnInit {
       console.log(data);
       
     })
+
+    alert("Credito enviado! Esperemos la confirmación del banco");
+    this.router.navigate(["/tabla-amortizacion"]);
+
   }
 
 }
