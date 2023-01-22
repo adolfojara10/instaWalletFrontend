@@ -8,6 +8,7 @@ import { SimuladorAhorrosComponent } from './pages/simulador-ahorros/simulador-a
 import { TransferenciasComponent } from './pages/transferencias/transferencias.component';
 import { TablaAmortizacionComponent } from './pages/tabla-amortizacion/tabla-amortizacion.component';
 import { SolicitudCreditoComponent } from './pages/solicitud-credito/solicitud-credito.component';
+import { LoginComponent } from './pages/login/login.component';
 
 const routes: Routes = [
   {path: "conversionMoneda", component: ConversionMonedaComponent},
@@ -17,7 +18,8 @@ const routes: Routes = [
   {path: "pagarDeuda", component: AdministracionDeudasComponent},
   {path: "aprovacion", component: AprovacionPrestamoComponent},
   {path: "tabla-amortizacion", component: TablaAmortizacionComponent},
-  {path: "solicitud-credito", component: SolicitudCreditoComponent}
+  {path: "solicitud-credito", component: SolicitudCreditoComponent},
+  {path: "login", component: LoginComponent}
 ];
 
 @NgModule({

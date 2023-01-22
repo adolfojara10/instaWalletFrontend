@@ -13,6 +13,7 @@ import { ConversionMonedaComponent } from './pages/conversion-moneda/conversion-
 import { HttpClientModule } from '@angular/common/http';
 import { TablaAmortizacionComponent } from './pages/tabla-amortizacion/tabla-amortizacion.component';
 import { SolicitudCreditoComponent } from './pages/solicitud-credito/solicitud-credito.component';
+import { LoginComponent } from './pages/login/login.component';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { SolicitudCreditoComponent } from './pages/solicitud-credito/solicitud-c
     AprovacionPrestamoComponent,
     ConversionMonedaComponent,
     TablaAmortizacionComponent,
-    SolicitudCreditoComponent
+    SolicitudCreditoComponent,
+    LoginComponent
 
   ],
   imports: [
