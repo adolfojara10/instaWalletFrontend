@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ConversionwsService } from './services/conversionws.service';
+//import { ConversionwsService } from './services/conversionws.service';
 
 @Component({
   selector: 'app-root',
@@ -10,4 +10,3 @@ export class AppComponent {
   title = 'proyecto-final-web';
 
 }
-  

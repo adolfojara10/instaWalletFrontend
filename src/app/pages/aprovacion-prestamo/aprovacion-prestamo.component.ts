@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { conversionM } from 'src/app/domain/conversionws';
 import { PrestamoWS } from 'src/app/domain/prestamos';
 import { AprovacionwsService } from 'src/app/services/aprovacionws.service';
-import { ConversionwsService } from 'src/app/services/conversionws.service';
+//import { ConversionwsService } from 'src/app/services/conversionws.service';
 
 @Component({
   selector: 'app-aprovacion-prestamo',
@@ -12,7 +12,7 @@ import { ConversionwsService } from 'src/app/services/conversionws.service';
 export class AprovacionPrestamoComponent implements OnInit {
 
   prestamoA: PrestamoWS = new PrestamoWS();
-  
+
   prestamos: any;
   constructor(private aprovacioP: AprovacionwsService) { }
 
@@ -25,7 +25,7 @@ export class AprovacionPrestamoComponent implements OnInit {
     })
     this.cargarPrestamos();
     //this.actualizar();
-    
+
   }
 
   cargarPrestamos(){

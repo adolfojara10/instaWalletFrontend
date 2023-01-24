@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ConversionMonedaComponent } from './conversion-moneda.component';
+import { CrearCuentaComponent } from './crear-cuenta.component';
 
-describe('ConversionMonedaComponent', () => {
-  let component: ConversionMonedaComponent;
-  let fixture: ComponentFixture<ConversionMonedaComponent>;
+describe('CrearCuentaComponent', () => {
+  let component: CrearCuentaComponent;
+  let fixture: ComponentFixture<CrearCuentaComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ConversionMonedaComponent ]
+      declarations: [ CrearCuentaComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ConversionMonedaComponent);
+    fixture = TestBed.createComponent(CrearCuentaComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

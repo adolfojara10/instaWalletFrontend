@@ -9,11 +9,12 @@ import { SimuladorAhorrosComponent } from './pages/simulador-ahorros/simulador-a
 import { EstadoCuentaComponent } from './pages/estado-cuenta/estado-cuenta.component';
 import { AdministracionDeudasComponent } from './pages/administracion-deudas/administracion-deudas.component';
 import { AprovacionPrestamoComponent } from './pages/aprovacion-prestamo/aprovacion-prestamo.component';
-import { ConversionMonedaComponent } from './pages/conversion-moneda/conversion-moneda.component';
+//import { ConversionMonedaComponent } from './pages/conversion-moneda/conversion-moneda.component';
 import { HttpClientModule } from '@angular/common/http';
 import { TablaAmortizacionComponent } from './pages/tabla-amortizacion/tabla-amortizacion.component';
 import { SolicitudCreditoComponent } from './pages/solicitud-credito/solicitud-credito.component';
 import { LoginComponent } from './pages/login/login.component';
+import { CrearCuentaComponent } from './pages/crear-cuenta/crear-cuenta.component';
 
 
 @NgModule({
@@ -24,10 +25,11 @@ import { LoginComponent } from './pages/login/login.component';
     EstadoCuentaComponent,
     AdministracionDeudasComponent,
     AprovacionPrestamoComponent,
-    ConversionMonedaComponent,
+    //ConversionMonedaComponent,
     TablaAmortizacionComponent,
     SolicitudCreditoComponent,
-    LoginComponent
+    LoginComponent,
+    CrearCuentaComponent
 
   ],
   imports: [
@@ -35,7 +37,7 @@ import { LoginComponent } from './pages/login/login.component';
     AppRoutingModule,
     HttpClientModule,
     FormsModule
-    
+
   ],
   providers: [],
   bootstrap: [AppComponent]
