@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { DetalleCuenta } from 'src/app/domain/detalleCuenta';
 import { personaS } from 'src/app/domain/persona';
+import { DetalleCuentaService } from 'src/app/services/detalleCuentaService/detalle-cuenta.service';
 import { TransferenciaswsService } from 'src/app/services/transferenciasws.service';
 
 @Component({
@@ -8,32 +10,43 @@ import { TransferenciaswsService } from 'src/app/services/transferenciasws.servi
   styleUrls: ['./transferencias.component.css']
 })
 export class TransferenciasComponent implements OnInit {
-  monto: number = 0;
-  saldo: number = 0;
-  personaOb: personaS = new personaS();
-  personaBc: personaS = new personaS();
-  cedulaReceptor: String = "";
-  constructor(private transferencias: TransferenciaswsService) { 
-    
+  detalleCuenta : DetalleCuenta = new DetalleCuenta();
+  // monto: number = 0;
+  // saldo: number = 0;
+  // personaOb: personaS = new personaS();
+  // personaBc: personaS = new personaS();
+  // cedulaReceptor: String = "";
+  constructor(private detalleCuntaServise: DetalleCuentaService) {
+
   }
 
   ngOnInit(): void {
-    this.cargarDatosS();   
-    this.cargarSaldo(); 
+    // this.cargarDatosS();
+    // this.cargarSaldo();
   }
 
-  cargarDatosS(){
+  realizarT(){
+    this.detalleCuenta.tipoMovimiento = "Transferencia";
+    console.log(this.detalleCuenta);
+    this.detalleCuntaServise.crearDetalleCuenta(this.detalleCuenta).subscribe((data) => {
+      console.log(data);
+      alert("Tansaccion Realizada con Exito");
+    })
+
+  }
+
+  /*cargarDatosS(){
     this.transferencias.getUserSesion().subscribe((data:any) => {
       console.log(data);
       this.personaOb = data;
-      
+
     });
   }
 
   cargarSaldo(){
     return this.transferencias.getUserSesionSaldo().subscribe((data:any) => {
       console.log("saldo en cuenta "+data)
-      this.saldo = data;      
+      this.saldo = data;
     });
   }
 
@@ -48,5 +61,5 @@ export class TransferenciasComponent implements OnInit {
     this.transferencias.transferir(this.personaBc).subscribe((data:any) => {
       console.log(data);
     })
-  }
+  }*/
 }

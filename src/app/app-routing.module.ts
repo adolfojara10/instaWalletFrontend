@@ -10,10 +10,11 @@ import { TablaAmortizacionComponent } from './pages/tabla-amortizacion/tabla-amo
 import { SolicitudCreditoComponent } from './pages/solicitud-credito/solicitud-credito.component';
 import { LoginComponent } from './pages/login/login.component';
 import { CrearCuentaComponent } from './pages/crear-cuenta/crear-cuenta.component';
+import { DetalleCuentaComponent } from './pages/detalle-cuenta/detalle-cuenta.component';
 
 const routes: Routes = [
   //{path: "conversionMoneda", component: ConversionMonedaComponent},
-  {path: "estadoCuenta", component: EstadoCuentaComponent},
+  {path: "estadoCuenta", component: DetalleCuentaComponent},
   {path: "simuladorAhorros", component: SimuladorAhorrosComponent},
   {path: "transferencia", component: TransferenciasComponent},
   {path: "pagarDeuda", component: AdministracionDeudasComponent},
