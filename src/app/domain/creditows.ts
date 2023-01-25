@@ -1,4 +1,5 @@
 export class Credito{
+    id: number=0;
     estadoSolicitudCredito: String = "en trámite";
     estado: String = "en trámite";
     valorCredito: number = 0;

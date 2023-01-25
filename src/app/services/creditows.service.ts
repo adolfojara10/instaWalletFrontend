@@ -14,4 +14,15 @@ export class CreditowsService {
     let url = environment.WS_PATH + '/credito/';
     return this.http.post<any>(url, credito);
   }
+
+  findAllPendientes(){
+    let url = environment.WS_PATH + '/credito/findAllPendientes';
+    return this.http.get<any>(url);
+  }
+
+  aprobarRechazarCredito(id:number, aprobarRechazar:string){
+    let url = environment.WS_PATH + '/credito/aprobar-rechazar-credito?id='+id+"&aprobarRechazar="+aprobarRechazar;
+    return this.http.post<any>(url, id);
+  }
+
 }

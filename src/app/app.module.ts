@@ -16,6 +16,7 @@ import { SolicitudCreditoComponent } from './pages/solicitud-credito/solicitud-c
 import { LoginComponent } from './pages/login/login.component';
 import { CrearCuentaComponent } from './pages/crear-cuenta/crear-cuenta.component';
 import { DetalleCuentaComponent } from './pages/detalle-cuenta/detalle-cuenta.component';
+import { CreaditoManagementComponent } from './pages/creadito-management/creadito-management.component';
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import { DetalleCuentaComponent } from './pages/detalle-cuenta/detalle-cuenta.co
     SolicitudCreditoComponent,
     LoginComponent,
     CrearCuentaComponent,
-    DetalleCuentaComponent
+    DetalleCuentaComponent,
+    CreaditoManagementComponent
 
   ],
   imports: [
