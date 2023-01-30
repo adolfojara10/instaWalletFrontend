@@ -25,6 +25,7 @@ const routes: Routes = [
   {path: "login", component: LoginComponent},
   {path: "crearCuenta", component: CrearCuentaComponent},
   {path: "creditomanagement", component: CreaditoManagementComponent},
+  {path: "libretadeAhorros", component: EstadoCuentaComponent},
   {path: '', redirectTo: 'login', pathMatch: 'full'}
 ];
 
