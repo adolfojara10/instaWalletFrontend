@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { DetalleCuenta } from 'src/app/domain/detalleCuenta';
+import { DetalleCuentaService } from 'src/app/services/detalleCuentaService/detalle-cuenta.service';
 import { EstadocwsService } from 'src/app/services/estadocws.service';
 
 @Component({
@@ -8,21 +10,20 @@ import { EstadocwsService } from 'src/app/services/estadocws.service';
 })
 export class EstadoCuentaComponent implements OnInit {
 
-  constructor(private estadoCuenta: EstadocwsService) { }
+  constructor(private detalleCuntaServise: DetalleCuentaService) {
 
+  }
   estado: number = 0;
+  detalle: DetalleCuenta[]=[];
+  id : string = "0111";
 
   ngOnInit(): void {
-    console.log("yeaa ");    
     this.obtenerEstadoC();
-    this.estado;
   }
 
-  obtenerEstadoC(){   
-    console.log("eee")   
-    this.estadoCuenta.getEstado().subscribe(resp => {
-      console.log(resp);
-      this.estado = resp;
+  obtenerEstadoC(){
+    this.detalleCuntaServise.lista().subscribe((listar)=>{
+      listar.forEach((vari)=>(vari.cuentaCodigo == this.id )? this.detalle.push(vari):this.detalle)
     })
   }
 }

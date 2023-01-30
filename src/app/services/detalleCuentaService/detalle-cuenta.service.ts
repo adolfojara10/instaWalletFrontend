@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 import { DetalleCuenta } from 'src/app/domain/detalleCuenta';
 import { environment } from 'src/environments/environment';
 
@@ -23,5 +24,11 @@ export class DetalleCuentaService {
       observe: 'response'
     })
     //return this.http.post('http://localhost:8080/instawallet/cuenta/', cuenta);
+  }
+
+  lista():Observable<DetalleCuenta[]>{
+
+    let url = environment.WS_PATH + '/detalleCuenta/listar';
+    return this.http.get<DetalleCuenta[]>(url);
   }
 }
