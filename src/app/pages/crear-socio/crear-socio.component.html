@@ -30780,7 +30780,7 @@
             <div class="profile-desc">
               <div class="profile-pic">
                 <div class="profile-name">
-                  <h5 class="mb-0 font-weight-normal">Entidad Bancaria</h5>
+                  <h5 class="mb-0 font-weight-normal">InstaWallet</h5>
                   <span>Basic Member</span>
                 </div>
               </div>
@@ -30976,24 +30976,45 @@
   
                         <div class="card col-lg-3 mx-auto">
                           <form style="align-items: flex-end;">
-                            <h3>Cuenta a realizar Transaccion</h3>
+                            <h3>Registrar Socio</h3>
   
                             <div class="form-group">
-                              <label class="card-title text-left" for="TxtIdc">Numero Cuenta:
-                              </label>
-                              <!--<input class="form-control p_input" id="numeroCuenta" name="numeroCuenta" type="text"
-                              [(ngModel)]="detalleCuenta.cuentaCodigo"/>-->
+                                <label for="txtidentificador">Identificador: </label>
+                                <input class="form-control p_input" id="txtidentificador"
+                                    name="txtidentificador" type="text"
+                                    [(ngModel)]="socio.identificacionSocio" />
                             </div>
-  
+
                             <div class="form-group">
-                              <h4 class="card-title text-left mb-3" for="txtMontoT">Monto de transferencias: </h4>
-                              <!--<input class="form-control p_input" id="txtMontoT" name="txtMontoT" type="number"
-                              [(ngModel)]="detalleCuenta.valor"/>-->
+                                <label class="card-title text-left" for="txtNombre">Nombre:
+                                </label>
+                                <input class="form-control p_input" id="txtNombre"
+                                    name="txtNombre" type="text"
+                                    [(ngModel)]="socio.nombreSocio" />
                             </div>
-  
+
+                            <div class="form-group">
+                                <label for="txtCorreo">Correo Personal: </label>
+                                <input class="form-control p_input" id="txtCorreo"
+                                    name="txtCorreo" type="text"
+                                    [(ngModel)]="socio.correoSocio" />
+                            </div>
+
+                            <div class="form-group">
+                                <label for="txtPasword">Telefono: </label>
+                                <input class="form-control p_input" id="txtPasword"
+                                    name="txtPasword" type="text"
+                                    [(ngModel)]="socio.telefonoSocio" />
+                            </div>
+
                             <div class="text-center">
-                              <!--<button class="btn btn-outline-primary btn-fw" (click)="realizarT()">Realizar
-                                Transaccion</button>-->
+                                <button class="btn btn-outline-primary btn-fw"
+                                    (click)="crearSocio()" href="http://localhost:4200/crearsocio">Guardar</button>
+                            </div>
+
+                            <div class="text-center">
+                                <button class="btn btn-outline-primary btn-fw"
+                                    (click)="redireccionar()">Listar Socios</button>
                             </div>
   
   

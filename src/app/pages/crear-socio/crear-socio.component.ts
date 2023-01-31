@@ -27,4 +27,10 @@ export class CrearSocioComponent implements OnInit {
       alert("Socio creado con exito");
     })
   }
+
+  redireccionar(){
+    this.router.navigate(["listarSocios"]).then(()=>{
+      window.location.reload();
+    });
+  }
 }

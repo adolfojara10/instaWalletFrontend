@@ -20,6 +20,7 @@ import { CreaditoManagementComponent } from './pages/creadito-management/creadit
 import { CrearSocioComponent } from './pages/crear-socio/crear-socio.component';
 //import { ConfiguracionesComponent } from './configuraciones/configuraciones.component';
 import { UsuariosComponent } from './pages/usuarios/usuarios.component';
+import { ListarsociosComponent } from './pages/listarsocios/listarsocios.component';
 
 
 @NgModule({
@@ -39,7 +40,8 @@ import { UsuariosComponent } from './pages/usuarios/usuarios.component';
     CreaditoManagementComponent,
     CrearSocioComponent,
     //ConfiguracionesComponent,
-    UsuariosComponent
+    UsuariosComponent,
+    ListarsociosComponent
 
   ],
   imports: [
