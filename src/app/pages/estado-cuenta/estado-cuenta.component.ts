@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Cuenta } from 'src/app/domain/cuenta';
 import { DetalleCuenta } from 'src/app/domain/detalleCuenta';
+import { CrearCuentaServiceService } from 'src/app/services/cuentaService/crear-cuenta-service.service';
 import { DetalleCuentaService } from 'src/app/services/detalleCuentaService/detalle-cuenta.service';
 import { EstadocwsService } from 'src/app/services/estadocws.service';
 
@@ -10,12 +12,13 @@ import { EstadocwsService } from 'src/app/services/estadocws.service';
 })
 export class EstadoCuentaComponent implements OnInit {
 
-  constructor(private detalleCuntaServise: DetalleCuentaService) {
+  constructor(private detalleCuntaServise: DetalleCuentaService,private crearCuentaService:CrearCuentaServiceService) {
 
   }
   estado: number = 0;
   detalle: DetalleCuenta[]=[];
   id : string ;
+  cuentas:Cuenta[] = [];
 
   ngOnInit(): void {    
     var aux = 
@@ -27,8 +30,12 @@ export class EstadoCuentaComponent implements OnInit {
 
   obtenerEstadoC(){
     console.log(this.id + "en metodo");
-    this.detalleCuntaServise.lista().subscribe((listar)=>{
-      listar.forEach((vari)=>(vari.cuentaCodigo == this.id )? this.detalle.push(vari):this.detalle)
-    })
+    this.crearCuentaService.obtenerCuentas().subscribe(
+      (cuentas:Cuenta[])=>{
+        this.cuentas=cuentas;
+        // this.detalleCuntaServise.lista().subscribe((listar)=>{
+        //   listar.forEach((vari)=>(vari.cuentaCodigo == this.id )? this.detalle.push(vari):this.detalle)
+        // })
+      })
   }
 }
