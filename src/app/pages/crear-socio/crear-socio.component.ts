@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { socioM } from 'src/app/domain/socio';
+import { CreditowsService } from 'src/app/services/creditows.service';
 
 @Component({
   selector: 'app-crear-socio',
@@ -7,9 +10,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CrearSocioComponent implements OnInit {
 
-  constructor() { }
+
+  socio:socioM = new socioM();
+
+  constructor(private controladorU: CreditowsService,private router: Router) { }
+  
+
 
   ngOnInit(): void {
   }
 
+  crearSocio(){
+    console.log(this.controladorU);
+    this.controladorU.crearSocio(this.socio).subscribe((data) => {
+      console.log(data);
+      alert("Socio creado con exito");
+    })
+  }
 }

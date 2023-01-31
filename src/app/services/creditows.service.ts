@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import { Credito } from '../domain/creditows';
+import { socioM } from '../domain/socio';
 import { usuarioM } from '../domain/usuarios';
 
 @Injectable({
@@ -34,6 +35,16 @@ export class CreditowsService {
   crearUsuario(usuario: usuarioM){
     let url = environment.WS_PATH+'/usuario/createUsuario';
     return this.http.post<String>(url, usuario);
+  }
+
+  crearSocio(socio:socioM){
+    let url = environment.WS_PATH+'/socio/';
+    return this.http.post<String>(url, socio);
+  }
+
+  findAllSocios(){
+    let url = environment.WS_PATH+'/socio/';
+    return this.http.get<any>(url);
   }
 
 }
