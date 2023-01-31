@@ -17,6 +17,8 @@ import { LoginComponent } from './pages/login/login.component';
 import { CrearCuentaComponent } from './pages/crear-cuenta/crear-cuenta.component';
 import { DetalleCuentaComponent } from './pages/detalle-cuenta/detalle-cuenta.component';
 import { CreaditoManagementComponent } from './pages/creadito-management/creadito-management.component';
+//import { ConfiguracionesComponent } from './configuraciones/configuraciones.component';
+import { UsuariosComponent } from './pages/usuarios/usuarios.component';
 
 
 @NgModule({
@@ -33,7 +35,9 @@ import { CreaditoManagementComponent } from './pages/creadito-management/creadit
     LoginComponent,
     CrearCuentaComponent,
     DetalleCuentaComponent,
-    CreaditoManagementComponent
+    CreaditoManagementComponent,
+    //ConfiguracionesComponent,
+    UsuariosComponent
 
   ],
   imports: [

@@ -12,6 +12,7 @@ import { LoginComponent } from './pages/login/login.component';
 import { CrearCuentaComponent } from './pages/crear-cuenta/crear-cuenta.component';
 import { DetalleCuentaComponent } from './pages/detalle-cuenta/detalle-cuenta.component';
 import { CreaditoManagementComponent } from './pages/creadito-management/creadito-management.component';
+import { UsuariosComponent } from './pages/usuarios/usuarios.component';
 
 const routes: Routes = [
   //{path: "conversionMoneda", component: ConversionMonedaComponent},
@@ -26,6 +27,7 @@ const routes: Routes = [
   {path: "crearCuenta", component: CrearCuentaComponent},
   {path: "creditomanagement", component: CreaditoManagementComponent},
   {path: "libretadeAhorros", component: EstadoCuentaComponent},
+  {path: "usuarios", component: UsuariosComponent},
   {path: '', redirectTo: 'login', pathMatch: 'full'}
 ];
 
