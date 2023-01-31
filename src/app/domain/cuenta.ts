@@ -4,4 +4,5 @@ export class Cuenta{
   monto: number = 0;
   fechaCreacion: Date = new Date();
   socioIdentificacion: string = "";
+  detallesCuentas: any
 }

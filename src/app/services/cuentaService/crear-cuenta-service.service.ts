@@ -8,10 +8,11 @@ import { environment } from 'src/environments/environment';
   providedIn: 'root'
 })
 export class CrearCuentaServiceService {
+  cuentas:Cuenta[]=[];
+ 
   httpOptions = {
     headers: new HttpHeaders({'Content-Type':'application/json'})
   }
-
   constructor(private http: HttpClient) {
   }
 
@@ -30,10 +31,13 @@ export class CrearCuentaServiceService {
     //return this.http.post('http://localhost:8080/instawallet/cuenta/', cuenta);
   }
 
-  obtenerCuentas(): Observable<any> {
-
-    let finalUrl = environment.WS_PATH + '/listarCuentas';
-    return this.http.get<Cuenta>(finalUrl, this.httpOptions);
+  obtenerCuentas(): Observable<any> { 
+    //Metodo Get
+    let finalUrl = environment.WS_PATH + '/cuenta/listarCuentas';
+    console.log("finalUrl")
+    return this.http.get<Cuenta>(finalUrl,this.httpOptions);
   }
+
+ 
 
 }

@@ -12,30 +12,46 @@ import { EstadocwsService } from 'src/app/services/estadocws.service';
 })
 export class EstadoCuentaComponent implements OnInit {
 
-  constructor(private detalleCuntaServise: DetalleCuentaService,private crearCuentaService:CrearCuentaServiceService) {
+  constructor(private detalleCuntaServise: DetalleCuentaService, private crearCuentaService: CrearCuentaServiceService) {
 
   }
   estado: number = 0;
-  detalle: DetalleCuenta[]=[];
-  id : string ;
-  cuentas:Cuenta[] = [];
+  detalle: DetalleCuenta[] = [];
+  id: string;
+  cuentas: Cuenta[] = [];
+  cuentaAux:Cuenta;
+  cuentaDetalle: any;
 
-  ngOnInit(): void {    
-    var aux = 
-    console.log("aux es " +aux)
-    this.id=  localStorage.getItem("Usuario");
+  ngOnInit(): void {
+    this.id = localStorage.getItem("Usuario");
     console.log(this.id)
     this.obtenerEstadoC();
+    console.log("el Id es " +this.id)
+    console.log(this.cuentas.length)
+    // for(let i =0; i<this.cuentas.length;i++){
+ 
+    //   if (this.cuentas[i].socioIdentificacion == this.id){
+    //     console.log("Coincide")
+    //   } else {
+    //     console.log("hola")
+    //   }
+    // }
   }
 
-  obtenerEstadoC(){
+  obtenerEstadoC() {
     console.log(this.id + "en metodo");
-    this.crearCuentaService.obtenerCuentas().subscribe(
-      (cuentas:Cuenta[])=>{
-        this.cuentas=cuentas;
-        // this.detalleCuntaServise.lista().subscribe((listar)=>{
-        //   listar.forEach((vari)=>(vari.cuentaCodigo == this.id )? this.detalle.push(vari):this.detalle)
-        // })
-      })
+      this.crearCuentaService.obtenerCuentas().subscribe((cuentas: Cuenta[]) => {
+        console.log("Listar Cuentas");
+        console.log(cuentas);
+        this.cuentas= cuentas.filter(ref=>ref.socioIdentificacion=this.id);
+        console.log(this.cuentas);
+        console.log(this.cuentas[0].detallesCuentas);
+        this.cuentaDetalle = this.cuentas[0].detallesCuentas;
+      })     
+      // this.detalleCuntaServise.lista().subscribe((listar) => {
+      //   listar.forEach(
+      //     (vari) => (vari.cuentaCodigo == this.cuentaAux.numerCuenta) ?
+      //       this.detalle.push(vari) : this.detalle)
+      // })
   }
 }
