@@ -19,9 +19,18 @@ export class LoginComponent implements OnInit {
   }
 
   iniciar_sesion(){
-    console.log("Simulaaaaaaaaaaaaaaaar")
+
+    
+
     this.loginService.iniciar_sesion(this.login).subscribe((data) => {
       console.log(data);
+      console.log("Simulaaaaaaaaaaaaaaaar")
+      console.log("Correo " + this.login.correo)
+      localStorage.setItem("Usuario",this.login.correo)
+      alert("Bienvenido")
+      this.router.navigate(["libretadeAhorros"]).then(()=>{
+        window.location.reload();
+      });
       
     })
 

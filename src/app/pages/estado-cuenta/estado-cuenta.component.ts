@@ -15,13 +15,18 @@ export class EstadoCuentaComponent implements OnInit {
   }
   estado: number = 0;
   detalle: DetalleCuenta[]=[];
-  id : string = "0111";
+  id : string ;
 
-  ngOnInit(): void {
+  ngOnInit(): void {    
+    var aux = 
+    console.log("aux es " +aux)
+    this.id=  localStorage.getItem("Usuario");
+    console.log(this.id)
     this.obtenerEstadoC();
   }
 
   obtenerEstadoC(){
+    console.log(this.id + "en metodo");
     this.detalleCuntaServise.lista().subscribe((listar)=>{
       listar.forEach((vari)=>(vari.cuentaCodigo == this.id )? this.detalle.push(vari):this.detalle)
     })
