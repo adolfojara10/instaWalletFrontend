@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { DetalleCuenta } from 'src/app/domain/detalleCuenta';
 import { personaS } from 'src/app/domain/persona';
 import { DetalleCuentaService } from 'src/app/services/detalleCuentaService/detalle-cuenta.service';
@@ -16,7 +17,7 @@ export class TransferenciasComponent implements OnInit {
   // personaOb: personaS = new personaS();
   // personaBc: personaS = new personaS();
   // cedulaReceptor: String = "";
-  constructor(private detalleCuntaServise: DetalleCuentaService) {
+  constructor(private detalleCuntaServise: DetalleCuentaService,private router: Router) {
 
   }
 
@@ -33,6 +34,13 @@ export class TransferenciasComponent implements OnInit {
       alert("Tansaccion Realizada con Exito");
     })
 
+  }
+
+  CerrarSesion() {
+    localStorage.clear();
+    this.router.navigate(['/login']).then(() => {
+      window.location.reload();
+    });
   }
 
   /*cargarDatosS(){

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Cuenta } from 'src/app/domain/cuenta';
 import { DetalleCuenta } from 'src/app/domain/detalleCuenta';
 import { CrearCuentaServiceService } from 'src/app/services/cuentaService/crear-cuenta-service.service';
@@ -12,7 +13,7 @@ import { EstadocwsService } from 'src/app/services/estadocws.service';
 })
 export class EstadoCuentaComponent implements OnInit {
 
-  constructor(private detalleCuntaServise: DetalleCuentaService, private crearCuentaService: CrearCuentaServiceService) {
+  constructor(private detalleCuntaServise: DetalleCuentaService, private crearCuentaService: CrearCuentaServiceService,private router: Router) {
 
   }
   estado: number = 0;
@@ -53,5 +54,12 @@ export class EstadoCuentaComponent implements OnInit {
       //     (vari) => (vari.cuentaCodigo == this.cuentaAux.numerCuenta) ?
       //       this.detalle.push(vari) : this.detalle)
       // })
+  }
+
+  CerrarSesion() {
+    localStorage.clear();
+    this.router.navigate(['/login']).then(() => {
+      window.location.reload();
+    });
   }
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-detalle-cuenta',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DetalleCuentaComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
+  }
+
+  CerrarSesion() {
+    localStorage.clear();
+    this.router.navigate(['/login']).then(() => {
+      window.location.reload();
+    });
   }
 
 }

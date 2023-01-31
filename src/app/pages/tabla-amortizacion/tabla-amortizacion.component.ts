@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { CuotaCreditoWS } from 'src/app/domain/cuotaCredito';
 import { simuladorAhorro } from 'src/app/domain/simulador';
 import { TablaAmortizacionwsService } from 'src/app/services/tabla-amortizacionws.service';
@@ -22,7 +23,7 @@ export class TablaAmortizacionComponent implements OnInit {
 
   //rendimiento : number = 0;
 
-  constructor(private simuladorTabla: TablaAmortizacionwsService) { }
+  constructor(private simuladorTabla: TablaAmortizacionwsService,private router: Router) { }
 
   ngOnInit(): void {
   }
@@ -39,6 +40,13 @@ export class TablaAmortizacionComponent implements OnInit {
         
       }
     })
+  }
+
+  CerrarSesion() {
+    localStorage.clear();
+    this.router.navigate(['/login']).then(() => {
+      window.location.reload();
+    });
   }
 
 }

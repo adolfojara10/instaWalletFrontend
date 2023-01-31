@@ -31,4 +31,11 @@ export class SolicitudCreditoComponent implements OnInit {
 
   }
 
+  CerrarSesion() {
+    localStorage.clear();
+    this.router.navigate(['/login']).then(() => {
+      window.location.reload();
+    });
+  }
+
 }

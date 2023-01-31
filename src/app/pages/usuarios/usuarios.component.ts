@@ -27,4 +27,11 @@ export class UsuariosComponent implements OnInit {
       });
     })
   }
+  
+  CerrarSesion() {
+    localStorage.clear();
+    this.router.navigate(['/login']).then(() => {
+      window.location.reload();
+    });
+  }
 }
