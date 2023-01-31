@@ -17,6 +17,7 @@ import { LoginComponent } from './pages/login/login.component';
 import { CrearCuentaComponent } from './pages/crear-cuenta/crear-cuenta.component';
 import { DetalleCuentaComponent } from './pages/detalle-cuenta/detalle-cuenta.component';
 import { CreaditoManagementComponent } from './pages/creadito-management/creadito-management.component';
+import { CrearSocioComponent } from './pages/crear-socio/crear-socio.component';
 //import { ConfiguracionesComponent } from './configuraciones/configuraciones.component';
 import { UsuariosComponent } from './pages/usuarios/usuarios.component';
 
@@ -36,6 +37,7 @@ import { UsuariosComponent } from './pages/usuarios/usuarios.component';
     CrearCuentaComponent,
     DetalleCuentaComponent,
     CreaditoManagementComponent,
+    CrearSocioComponent,
     //ConfiguracionesComponent,
     UsuariosComponent
 

@@ -30826,15 +30826,15 @@
                   </div>
               </li>
 
-              <li class="nav-item menu-items"><a class="nav-link" href="http://localhost:4200/estadoCuenta"> <span>
+              <li class="nav-item menu-items active"><a class="nav-link" href="http://localhost:4200/libretadeAhorros"> <span>
                       </span> <span class="menu-title">Estado de Cuenta</span>
                   </a></li>
 
-              <li class="nav-item menu-items"><a class="nav-link" data-toggle="collapse"
+              <!-- <li class="nav-item menu-items"><a class="nav-link" data-toggle="collapse"
                       href="http://localhost:4200/aprovacion" aria-expanded="false" aria-controls="ui-basic"> <span>
-                      </span> <span class="menu-title">Pagos</span>
+                      </span> <span class="menu-title">Aprovacion de creditos</span>
                   </a>
-              </li>
+              </li> -->
 
               <li class="nav-item menu-items"><a class="nav-link" data-toggle="collapse"
                   href="http://localhost:4200/transferencia" aria-expanded="false" aria-controls="ui-basic"> <span>
@@ -30843,12 +30843,7 @@
           </li>
 
 
-              <li class="nav-item menu-items"><a class="nav-link"
-                      href="http://localhost:8080/ProyectoFinalBanco/faces/administracion-deuda.xhtml"> <span>
-                      </span> <span class="menu-title">Administración de Deudas</span>
-                  </a></li>
-
-                  <li class="nav-item menu-items active"><a class="nav-link"
+                  <li class="nav-item menu-items"><a class="nav-link"
                       href="http://localhost:4200/tabla-amortizacion"> <span>
                       </span> <span class="menu-title">Tabla de amortización</span>
                   </a></li>
@@ -30915,68 +30910,8 @@
           <div class="main-panel">
               <div class="content-wrapper">
 
-
-                  <form id="j_idt15" name="j_idt15" method="post"
-                      action="/ProyectoFinalBanco/faces/conversion-moneda.xhtml"
-                      enctype="application/x-www-form-urlencoded">
-                      <input type="hidden" name="j_idt15" value="j_idt15">
-
-                      <div class="container-scroller">
-                          <div class="container-fluid page-body-wrapper full-page-wrapper">
-                              <div class="row w-100 m-0">
-                                  <div class="content-wrapper full-page-wrapper d-flex align-items-center auth"
-                                      style="background-color: #002b45">
-                                      <!--12tambien-->
-                                      <div class="content-wrapper full-page-wrapper d-flex align-items-center auth">
-                                          <h1>
-                                          </h1>
-                                          <div class="card col-lg-4 mx-auto">
-                                              <div class="card-body px-5 py-5">
-                                                  <h3 class="card-title text-left mb-3">Simulador</h3>
-
-                                                  <form>
-                                                      <!-- <div class="form-group">
-                                                          <label for="txtMonto">Monto: </label>
-                                                          <input class="form-control p_input" id="txtMonto"
-                                                              name="txtMonto" type="number"
-                                                              [(ngModel)]="simuladorAhorro.monto" />
-                                                      </div>
-
-                                                      <div class="form-group">
-                                                          <label class="card-title text-left" for="txtTiempo">Tiempo:
-                                                          </label>
-                                                          <input class="form-control p_input" id="txtTiempo"
-                                                              name="txtTiempo" type="number"
-                                                              [(ngModel)]="simuladorAhorro.tiempo" />
-                                                      </div>
-
-                                                      <div class="text-center">
-                                                          <button class="btn btn-outline-primary btn-fw"
-                                                              (click)="simular()">Simular Tabla</button>
-                                                      </div> -->
-
-                                                      <!--<br>
-                                                      <label class="card-title text-left"
-                                                          for="txtRendimiento">Rendimiento: </label>
-                                                      <output class="form-control p_input" id="txtRendimiento"
-                                                          name="txtRendimiento" type="number">{{rendimiento}}</output>-->
-                                                  </form>
-
-                                              </div>
-                                          </div>
-                                      </div>
-                                      <!--34tambien-->
-                                  </div>
-                                  <!-- content-wrapper ends -->
-                              </div>
-                              <!-- row ends -->
-                          </div>
-                          <!-- page-body-wrapper ends -->
-                      </div>
-                  </form>
-
                   <h1>
-                      Tabla de amortización
+                      Estado Cuenta
                   </h1>
                   <form id="j_idt15" name="j_idt15" method="post"
                       action="/ProyectoFinalBanco/faces/conversion-moneda.xhtml"
@@ -30994,18 +30929,17 @@
                                           </h1>
                                           <div class="card col-lg-4 mx-auto">
 
-                                              <h3 class="card-title text-left mb-3">Simulación de tablas de
-                                                  amortización</h3>
+                                              <h3 class="card-title text-left mb-3">Estado Cuenta</h3>
                                               <form>
 
-                                                  <h3>Tabla de amortización</h3>
+                                                  <h3>Libreta de Ahorros</h3>
 
                                                   <ul>
 
                                                       <table class="table table-striped">
                                                           <thead>
                                                               <th>
-                                                                  Tiempo
+                                                                  Tipo
                                                               </th>
                                                               <th>
                                                                   Monto
